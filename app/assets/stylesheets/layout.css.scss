@@ -8,11 +8,42 @@ html {
   left: 30px;
 }
 
-#section-header {
-  background-color: black;
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#section-header-main {
+  background-color: #455868;
   color: white;
   width: 30%;
   height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  width: 30%;
+  .style-divider {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    top: 20px;
+  }
+}
+
+#section-header-side {
+  background-color: #455868;
+  color: white;
+  height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  width: 80%;
+  .style-divider {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    top: 20px;
+  }
 }
 
 header {
@@ -55,7 +86,6 @@ header {
   color: #FFF;
   background: -webkit-gradient(linear, left top, left bottom, from(#C0C0C0), to(#000000));
   background: -moz-linear-gradient(top,  #C0C0C0, #000000);
-  margin-bottom: 30px;
   p {
     margin: 0;
   }
@@ -64,20 +94,20 @@ header {
   }
 }
 
-#body_content {
+#body-container {
   position: relative;
-  #body {
-    margin: 25px 100px;
+  #main-body {
+    float:left;
+    width: 70%;
   }
-  .image-align-left {
-    margin-right: 40px;
-  }
-  #side_body {
+  #side-body {
     padding-left: 25px;
     top: 0;
     right: 100px;
-    width: 250px;
+    width: 25%;
+    height: 1000px;
     border-left: 1.5px solid gray;
+    float:right;
     p {
       color: #777;
       font-size: 14px;
