@@ -2,6 +2,13 @@
 
 <section id='banner'>
   <%=raw @page.content_for(:banner) %>
+  <section id='gallery'>
+    <ul class='slider'>
+    <% @page.images.each do |image| %>
+      <li><%= link_to image_tag(image.thumbnail.url) %></li>
+    <% end %>
+    </ul>
+  </section>
 </section>
 
 <section id='content-nav'>
@@ -25,23 +32,3 @@
     <%=raw @page.content_for(:side_body) %>
   </section>
 </div>
-
-<script type="text/javascript">
-  $(function() {  
-      var pull        = $('#pull');  
-          menu        = $('nav ul');  
-          menuHeight  = menu.height();  
-    
-      $(pull).on('click', function(e) {  
-          e.preventDefault();  
-          menu.slideToggle();  
-      });  
-  });
-
-  $(window).resize(function(){  
-      var w = $(window).width();  
-      if(w > 320 && menu.is(':hidden')) {  
-          menu.removeAttr('style');  
-      }  
-  });  
-</script>

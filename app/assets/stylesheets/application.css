@@ -12,6 +12,8 @@
  *= require_tree .
  */
 
+/*----------- RESUME NAV-------------*/
+
 #nav-section {
   background-color: #ece8e5;
 }
@@ -141,4 +143,23 @@
   #content-nav nav li a {
     border-bottom: 1px solid #576979;
   }
+}
+
+/* --------------CAROUSEL------------ */
+
+.slider {
+  width: 100%; /* Update to your slider width */
+  height: 250px; /* Update to your slider height */
+  overflow-x: visible;
+  overflow-y: hidden;
+  margin: 0px;
+}
+
+.slider li {
+  display: inline-block;
+}
+
+.slider img {
+  height: 250px;
+  width: auto;
 }
