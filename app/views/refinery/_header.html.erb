@@ -1,0 +1,8 @@
+<h1 id='logo'>
+  <%= link_to "Welcome to #{Refinery::Core.site_name}", refinery.root_path %>
+  <p><em>"A mind that is stretched by a new experience can never go back to its old dimensions."</em></p>
+</h1>
+<%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>

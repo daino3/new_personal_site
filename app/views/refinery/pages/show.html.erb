@@ -1,1 +1,9 @@
-<%= render '/refinery/content_page' %>
+<div id='body-container'>
+  <section id='main-body-blog'>
+    <%=raw @page.content_for(:body) %>
+  </section>
+
+  <section id='side-body'>
+    <%=raw @page.content_for(:side_body) %>
+  </section>
+</div>
