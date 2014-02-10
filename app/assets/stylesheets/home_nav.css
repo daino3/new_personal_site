@@ -1,17 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-
 /*----------- RESUME NAV-------------*/
 
 #nav-section {
@@ -146,40 +132,4 @@
   #content-nav nav li a {
     border-bottom: 1px solid #576979;
   }
-}
-
-/* --------------CAROUSEL------------ */
-
-.slider {
-  width: 100%; /* Update to your slider width */
-  height: 250px; /* Update to your slider height */
-  overflow-x: visible;
-  overflow-y: hidden;
-  margin: 0px;
-  padding: 0px;
-}
-
-.slider li {
-  display: inline-block;
-  width: 33%;
-}
-
-.slider img {
-  height: auto;
-  width: 100%;
-}
-
-/*Skills*/
-
-.skills-list {
-  display: inline-block;
-  width: 22%;
-  min-height: 200px;
-  overflow: hidden;
-  vertical-align:top;
-}
-
-.skills-list ul{
-  margin: 0px;
-  padding-left: 20px;
 }

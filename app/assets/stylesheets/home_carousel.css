@@ -1,0 +1,20 @@
+/* --------------CAROUSEL------------ */
+
+.slider {
+  width: 100%; /* Update to your slider width */
+  height: 250px; /* Update to your slider height */
+  overflow-x: visible;
+  overflow-y: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.slider li {
+  display: inline-block;
+  width: 33%;
+}
+
+.slider img {
+  height: auto;
+  width: 100%;
+}

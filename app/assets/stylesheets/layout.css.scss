@@ -58,31 +58,56 @@ header {
   font-weight: bold;
   position: relative;
   padding: 15px 5px 15px 5px;
-  #logo {
+  .third {
+    display: inline-block;
+    width: 33%;
+  }
+  #logo h1{
     margin: 0;
-    font-size: 24px;
+    font-size: 30px;
   }
   p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 5px;
+    min-width: 20px;
   }
   a {
     color: #FFF;
     text-decoration: none;
   }
-  ul {
-    position: absolute;
-    right: 20px;
-    top: 15px;
+  #social-media-nav {
+    height: 50px;
+    margin:0 auto;
+    text-align:center;
+  }
+  #header-links-list {
+    padding: 0;
+  }
+  #header-links-list li {
+    display: inline-block;
+    border: 3px solid gray;
+    border-radius: 10px;
+    padding: 2px;
+    width: 60px;
+    height: 50px;
+    overflow:hidden;
+    background: white;
+    box-shadow: 2px 2px 2px 2px #888888;
+    margin-left: 20px;
+  }
+  #header-nav {
+    float:right;
+  }
+  .menu ul {
     list-style: none;
-    margin: 0;
-    li {
+    margin: 0px 20px 0px 0px;
+    float: right;
+    & li {
       display: inline-block;
-      float: left;
       padding: 2px 10px;
       border-right: solid 3px #6F6F6F;
-      line-height: 50px;
-      font-size: 20px;
+      line-height: 75px;
+      font-size: 25px;
       -webkit-transition-duration: 0.2s;
       transition-duration: 0.2s;
       -webkit-transition-property: -webkit-transform;
