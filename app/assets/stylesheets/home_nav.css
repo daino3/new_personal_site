@@ -21,12 +21,13 @@
 #content-nav nav {
   height: 60px;
   width: 100%;
-  background: #DCDCDC;
+  background: #C0C0C0;
   font-size: 15pt;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   position: relative;
-  border-bottom: 2px solid #C0C0C0;
+  border-bottom: 3px solid #808080;
+  border-top: 3px solid #808080;
 }
 #content-nav nav ul {
   padding: 0;
@@ -41,7 +42,7 @@
 }
 
 #content-nav nav a {
-  color: #A9A9A9;
+  color: #808080;
   display: inline-block;
   width: 200px;
   text-align: center;
@@ -50,7 +51,7 @@
   text-shadow: 1px 1px 0px #283744;
 }
 #content-nav nav li a {
-  border-right: 1px solid #C0C0C0;
+  border-right: 3px solid #808080;
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
