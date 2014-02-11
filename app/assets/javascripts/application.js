@@ -16,7 +16,7 @@
 
 //--------- CAROUSEL ---------//
 
-jQuery(function($) { 
+$(function() { 
 
   // settings
   var $transition_time = 1000; // 1 second
@@ -30,7 +30,6 @@ jQuery(function($) {
     
     setTimeout(function() {
       $('.slider li:first').remove();
-
     }, 500)
 
     $clone.appendTo($('.slider')).removeClass().addClass('inactive');
@@ -88,4 +87,22 @@ $(function() {
       }
     }
   });
+});
+
+// -----------blog nav---------- //
+
+jQuery(document).ready(function(){
+
+  if (!!jQuery('#follow').offset()) {
+    var stickyTop = jQuery('#follow').offset().top;
+    jQuery(window).scroll(function() {
+    var windowTop = jQuery(window).scrollTop();
+      if (stickyTop < windowTop){
+        jQuery('#follow').css({ position: 'fixed', top: 0, height: '238px', width: '357px' });
+      }
+      else {
+        jQuery('#follow').css('position','static');
+      }
+    });
+  }  
 });

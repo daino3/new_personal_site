@@ -95,7 +95,7 @@ header {
   }
   #social-media-nav {
     height: 40px;
-    margin:0 auto;
+    margin: 0 auto;
     text-align:center;
   }
   #header-links-list {
@@ -112,9 +112,25 @@ header {
     background: white;
     box-shadow: 2px 2px 2px 2px #888888;
     margin-left: 20px;
-    & img{
-    width: 35px;
-    height: auto;
+    & #facebook {
+      width: 35px;
+      height: auto;
+    }    
+    & #linkedin {
+      width: 40px;
+      height: auto;
+    }
+
+    & #twitter {
+      width: 42px;
+      height: auto;
+    }
+    & #github {
+      width: 45px;
+      height: auto; 
+    }
+    & #resume {
+      width: 50px;
     }
   }
   #header-nav {
@@ -185,9 +201,14 @@ header {
     width: 25%;
     height: 100%;
     float:right;
-    p {
-      color: #777;
-      font-size: 14px;
+    .blog-nav-links {
+      text-align: center;
+      margin-right: 18%;
+    & a {
+        color: #777;
+        font-size: 14px;
+        text-decoration: none;
+      }
     }
   }
 }
