@@ -49,7 +49,7 @@ module Newcms
 
 
     #added bc heroku 
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
 
     # Enforce whitelist mode for mass assignment.
     # This will create an empty whitelist of attributes available for mass-assignment for all models
