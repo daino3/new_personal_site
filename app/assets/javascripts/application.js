@@ -30,9 +30,22 @@ jQuery(function($) {
     
     setTimeout(function() {
       $('.slider li:first').remove();
+
     }, 500)
-    
-    $clone.appendTo($('.slider'));
+
+    $clone.appendTo($('.slider')).removeClass().addClass('inactive');
+
+    var slides = $('.slider').find('li')
+
+    for (var i = 0; i < slides.length; i++) {
+      if (i < 5 ) {
+        $('.slider li:nth-child('+i+')').removeClass().addClass('active');
+      }
+      else {
+        $('.slider li:nth-child('+i+')').removeClass().addClass('inactive'); 
+      }
+    }
+
     $('.slider').fadeIn(500);
     }
     , $transition_time + $time_between_slides 

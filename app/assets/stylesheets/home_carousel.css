@@ -11,10 +11,15 @@
 
 .slider li {
   display: inline-block;
-  width: 33%;
+  width: 33.1%;
+  vertical-align: top;
 }
 
 .slider img {
   height: auto;
   width: 100%;
+}
+
+.inactive {
+  visibility: hidden;
 }
