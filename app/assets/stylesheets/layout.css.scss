@@ -76,7 +76,7 @@ header {
     text-decoration: none;
   }
   #social-media-nav {
-    height: 50px;
+    height: 40px;
     margin:0 auto;
     text-align:center;
   }
@@ -88,12 +88,16 @@ header {
     border: 3px solid gray;
     border-radius: 10px;
     padding: 2px;
-    width: 60px;
-    height: 50px;
+    width: 45px;
+    height: 38px;
     overflow:hidden;
     background: white;
     box-shadow: 2px 2px 2px 2px #888888;
     margin-left: 20px;
+    & img{
+    width: 35px;
+    height: auto;
+    }
   }
   #header-nav {
     float:right;
