@@ -26,6 +26,7 @@ gem 'jquery-rails', '~> 2.0.0'
 gem 'coderay'
 gem 'RedCloth'
 
+gem 'rails_12factor'
 # gem 'flexslider'
 
 # To use ActiveModel has_secure_password
@@ -53,3 +54,5 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'globalize3', '0.3.0'
+
+ruby '1.9.3'
