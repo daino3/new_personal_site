@@ -44,6 +44,11 @@ gem 'rails_12factor'
 # To use debugger
 # gem 'debugger'
 
+# AWS cloud hosting services for images resources
+group :production do
+  gem 'fog'
+end
+
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
 
