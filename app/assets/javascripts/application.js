@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require_tree .
 
 //--------- CAROUSEL ---------//
@@ -106,3 +107,4 @@ jQuery(document).ready(function(){
     });
   }  
 });
+$(function(){ $(document).foundation(); });

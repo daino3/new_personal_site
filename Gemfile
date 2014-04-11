@@ -12,6 +12,7 @@ gem 'pry'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'sass',   '~> 3.2.0'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -19,9 +20,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'foundation-rails'
 end
 
 gem 'jquery-rails', '~> 2.0.0'
+gem 'haml'
+gem 'haml-rails'
 
 gem 'coderay'
 gem 'RedCloth'
@@ -54,10 +58,10 @@ gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.gi
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
-#  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'globalize3', '0.3.0'
+gem 'refinerycms-blog', '~> 2.0.0'
 
 ruby '1.9.3'

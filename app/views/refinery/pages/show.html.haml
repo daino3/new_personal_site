@@ -1,0 +1,5 @@
+%div{id: 'body-container'}
+  %section{id: 'main-body-blog'}
+    =raw @page.content_for(:body)
+  %section{id: 'side-body'}
+    =raw @page.content_for(:side_body)

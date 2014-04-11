@@ -1,0 +1,11 @@
+%meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1"}
+
+%section{id: 'gallery'}
+  = render partial: 'refinery/carousel', locals: { page: @page }
+
+%section.top-bar-section.large-12.large-centered
+  = render partial: 'refinery/page_nav'
+
+%div{id: 'body-container'}
+  %section{id: 'main-body-home'}
+    = raw coderay(@page.content_for(:body))

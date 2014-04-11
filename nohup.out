@@ -1,0 +1,282 @@
+=> Booting WEBrick
+=> Rails 3.2.13 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Connecting to database specified by database.yml
+[2014-03-11 14:50:36] INFO  WEBrick 1.3.1
+[2014-03-11 14:50:36] INFO  ruby 1.9.3 (2012-04-20) [x86_64-linux]
+[2014-03-11 14:50:36] INFO  WEBrick::HTTPServer#start: pid=7655 port=3000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-11 14:51:25 -0500
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[36mRefinery::Role Load (23.3ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = 'Refinery' LIMIT 1[0m
+  [1m[35mRefinery::User Load (26.9ms)[0m  SELECT "refinery_users".* FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = 1
+  [1m[36mRefinery::Page Load (87.9ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mRefinery::PagePart Load (90.2ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = 1 ORDER BY position ASC
+  [1m[36mRefinery::PagePart::Translation Load (34.8ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 1, 2)[0m
+  [1m[35mRefinery::Image Load (34.8ms)[0m  SELECT "refinery_images".* FROM "refinery_images" INNER JOIN "refinery_image_pages" ON "refinery_images"."id" = "refinery_image_pages"."image_id" WHERE "refinery_image_pages"."page_id" = 1 AND "refinery_image_pages"."page_type" = 'Refinery::Page' ORDER BY position ASC
+  Rendered refinery/pages/home.html.erb within layouts/application (894.2ms)
+Completed 200 OK in 2708ms (Views: 914.4ms | ActiveRecord: 1574.9ms)
+cache: [GET /] miss
+cache: [GET /] miss
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-03-11 14:51:28 -0500
+Compiled foundation_and_overrides.css  (3589ms)  (pid 7655)
+Compiled application.css  (3668ms)  (pid 7655)
+Served asset /application.css - 200 OK (4431ms)
+cache: [GET /assets/application.css] stale, invalid, store
+cache: [GET /assets/application.css] stale, invalid, store
+
+
+Started GET "/assets/vendor/modernizr.js" for 127.0.0.1 at 2014-03-11 14:51:33 -0500
+Compiled vendor/modernizr.js  (0ms)  (pid 7655)
+Served asset /vendor/modernizr.js - 200 OK (10ms)
+cache: [GET /assets/vendor/modernizr.js] miss, store
+cache: [GET /assets/vendor/modernizr.js] miss, store
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzFfNTlfMzhfcnN6X2ltYWdlZWRpdF8xMV81NTQzNjYyODk4LmpwZyJdXQ/rsz_imageedit_11_5543662898.jpg" for 127.0.0.1 at 2014-03-11 14:51:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzFfNTlfMzhfcnN6X2ltYWdlZWRpdF8xMV81NTQzNjYyODk4LmpwZyJdXQ/rsz_imageedit_11_5543662898.jpg] fresh
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-03-11 14:51:33 -0500
+Compiled foundation/foundation.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.abide.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.accordion.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.alert.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.clearing.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.dropdown.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.interchange.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.joyride.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.magellan.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.offcanvas.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.orbit.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.reveal.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.tab.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.tooltip.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.topbar.js  (0ms)  (pid 7655)
+Compiled foundation/foundation.equalizer.js  (0ms)  (pid 7655)
+Compiled foundation.js  (128ms)  (pid 7655)
+Compiled application.js  (171ms)  (pid 7655)
+Served asset /application.js - 200 OK (326ms)
+cache: [GET /assets/application.js] stale, invalid, store
+cache: [GET /assets/application.js] stale, invalid, store
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMjNfMjIxX2ltYWdlZWRpdF85Xzc3OTUyOTIwMzQuanBnIl1d/imageedit_9_7795292034.jpg" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMjNfMjIxX2ltYWdlZWRpdF85Xzc3OTUyOTIwMzQuanBnIl1d/imageedit_9_7795292034.jpg] fresh
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDZfMzBfMTAyX2ltYWdlZWRpdF8yXzYzNjA1ODc2MTEuanBnIl1d/imageedit_2_6360587611.jpg" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDZfMzBfMTAyX2ltYWdlZWRpdF8yXzYzNjA1ODc2MTEuanBnIl1d/imageedit_2_6360587611.jpg] fresh
+
+
+Started GET "/assets/notebook.png" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+Served asset /notebook.png - 304 Not Modified (81ms)
+cache: [GET /assets/notebook.png] stale, valid, store
+cache: [GET /assets/notebook.png] stale, valid, store
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDlfMThfODEzX2ltYWdlZWRpdF81Xzk4OTE2MTc2NjYuanBnIl1d/imageedit_5_9891617666.jpg" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDlfMThfODEzX2ltYWdlZWRpdF81Xzk4OTE2MTc2NjYuanBnIl1d/imageedit_5_9891617666.jpg] fresh
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMDZfMjg4X3Jzel9pbWFnZWVkaXRfMTNfNzM3NjkxODg5Ny5qcGciXV0/rsz_imageedit_13_7376918897.jpg" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMDZfMjg4X3Jzel9pbWFnZWVkaXRfMTNfNzM3NjkxODg5Ny5qcGciXV0/rsz_imageedit_13_7376918897.jpg] fresh
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMzBfMTI3X2ltYWdlZWRpdF83XzY1NzEyODA0MTIuanBnIl1d/imageedit_7_6571280412.jpg" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMzBfMTI3X2ltYWdlZWRpdF83XzY1NzEyODA0MTIuanBnIl1d/imageedit_7_6571280412.jpg] fresh
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMTFfNjE3X3Jzel9pbWFnZWVkaXRfMTVfMzM0NjczMDkxM18xXy5qcGciXV0/rsz_imageedit_15_3346730913%20%281%29.jpg" for 127.0.0.1 at 2014-03-11 14:51:34 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMTFfNjE3X3Jzel9pbWFnZWVkaXRfMTVfMzM0NjczMDkxM18xXy5qcGciXV0/rsz_imageedit_15_3346730913%20%281%29.jpg] fresh
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTNfNTVfMjRfMjUwX2ltYWdlZWRpdF8yXzY2Mjg5NTAzMzUuanBnIl1d/imageedit_2_6628950335.jpg" for 127.0.0.1 at 2014-03-11 14:51:35 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTNfNTVfMjRfMjUwX2ltYWdlZWRpdF8yXzY2Mjg5NTAzMzUuanBnIl1d/imageedit_2_6628950335.jpg] fresh
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[36mRefinery::Role Load (0.5ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = 'Refinery' LIMIT 1[0m
+  [1m[35mRefinery::User Load (0.4ms)[0m  SELECT "refinery_users".* FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = 1
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mRefinery::PagePart Load (0.4ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = 1 ORDER BY position ASC
+  [1m[36mRefinery::PagePart::Translation Load (0.3ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 1, 2)[0m
+  [1m[35mRefinery::Image Load (0.4ms)[0m  SELECT "refinery_images".* FROM "refinery_images" INNER JOIN "refinery_image_pages" ON "refinery_images"."id" = "refinery_image_pages"."image_id" WHERE "refinery_image_pages"."page_id" = 1 AND "refinery_image_pages"."page_type" = 'Refinery::Page' ORDER BY position ASC
+  Rendered refinery/pages/home.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 28ms (Views: 21.1ms | ActiveRecord: 2.3ms)
+cache: [GET /] miss
+cache: [GET /] miss
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+cache: [GET /assets/application.css] stale, valid, store
+cache: [GET /assets/application.css] stale, valid, store
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/vendor/modernizr.js" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+cache: [GET /assets/vendor/modernizr.js] stale, valid, store
+cache: [GET /assets/vendor/modernizr.js] stale, valid, store
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+cache: [GET /assets/application.js] stale, valid, store
+cache: [GET /assets/application.js] stale, valid, store
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzFfNTlfMzhfcnN6X2ltYWdlZWRpdF8xMV81NTQzNjYyODk4LmpwZyJdXQ/rsz_imageedit_11_5543662898.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzFfNTlfMzhfcnN6X2ltYWdlZWRpdF8xMV81NTQzNjYyODk4LmpwZyJdXQ/rsz_imageedit_11_5543662898.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDZfMzBfMTAyX2ltYWdlZWRpdF8yXzYzNjA1ODc2MTEuanBnIl1d/imageedit_2_6360587611.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDZfMzBfMTAyX2ltYWdlZWRpdF8yXzYzNjA1ODc2MTEuanBnIl1d/imageedit_2_6360587611.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDlfMThfODEzX2ltYWdlZWRpdF81Xzk4OTE2MTc2NjYuanBnIl1d/imageedit_5_9891617666.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDlfMThfODEzX2ltYWdlZWRpdF81Xzk4OTE2MTc2NjYuanBnIl1d/imageedit_5_9891617666.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/notebook.png" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+Served asset /notebook.png - 304 Not Modified (0ms)
+cache: [GET /assets/notebook.png] stale, valid, store
+cache: [GET /assets/notebook.png] stale, valid, store
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMjNfMjIxX2ltYWdlZWRpdF85Xzc3OTUyOTIwMzQuanBnIl1d/imageedit_9_7795292034.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMjNfMjIxX2ltYWdlZWRpdF85Xzc3OTUyOTIwMzQuanBnIl1d/imageedit_9_7795292034.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMDZfMjg4X3Jzel9pbWFnZWVkaXRfMTNfNzM3NjkxODg5Ny5qcGciXV0/rsz_imageedit_13_7376918897.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMDZfMjg4X3Jzel9pbWFnZWVkaXRfMTNfNzM3NjkxODg5Ny5qcGciXV0/rsz_imageedit_13_7376918897.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTNfNTVfMjRfMjUwX2ltYWdlZWRpdF8yXzY2Mjg5NTAzMzUuanBnIl1d/imageedit_2_6628950335.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTNfNTVfMjRfMjUwX2ltYWdlZWRpdF8yXzY2Mjg5NTAzMzUuanBnIl1d/imageedit_2_6628950335.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMTFfNjE3X3Jzel9pbWFnZWVkaXRfMTVfMzM0NjczMDkxM18xXy5qcGciXV0/rsz_imageedit_15_3346730913%20%281%29.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMTFfNjE3X3Jzel9pbWFnZWVkaXRfMTVfMzM0NjczMDkxM18xXy5qcGciXV0/rsz_imageedit_15_3346730913%20%281%29.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMzBfMTI3X2ltYWdlZWRpdF83XzY1NzEyODA0MTIuanBnIl1d/imageedit_7_6571280412.jpg" for 127.0.0.1 at 2014-03-11 14:54:33 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMzBfMTI3X2ltYWdlZWRpdF83XzY1NzEyODA0MTIuanBnIl1d/imageedit_7_6571280412.jpg] fresh
+[2014-03-11 14:54:33] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2014-03-11 14:56:23] INFO  going to shutdown ...
+[2014-03-11 14:56:23] INFO  WEBrick::HTTPServer#start done.
+Exiting
+=> Booting WEBrick
+=> Rails 3.2.13 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Connecting to database specified by database.yml
+[2014-03-11 14:56:41] INFO  WEBrick 1.3.1
+[2014-03-11 14:56:41] INFO  ruby 1.9.3 (2012-04-20) [x86_64-linux]
+[2014-03-11 14:56:41] INFO  WEBrick::HTTPServer#start: pid=9611 port=3000
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-11 14:56:43 -0500
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[36mRefinery::Role Load (1.0ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = 'Refinery' LIMIT 1[0m
+  [1m[35mRefinery::User Load (1.2ms)[0m  SELECT "refinery_users".* FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = 1
+  [1m[36mRefinery::Page Load (0.9ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mRefinery::PagePart Load (1.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = 1 ORDER BY position ASC
+  [1m[36mRefinery::PagePart::Translation Load (0.9ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 1, 2)[0m
+  [1m[35mRefinery::Image Load (1.2ms)[0m  SELECT "refinery_images".* FROM "refinery_images" INNER JOIN "refinery_image_pages" ON "refinery_images"."id" = "refinery_image_pages"."image_id" WHERE "refinery_image_pages"."page_id" = 1 AND "refinery_image_pages"."page_type" = 'Refinery::Page' ORDER BY position ASC
+  Rendered refinery/pages/home.html.erb within layouts/application (357.5ms)
+Completed 200 OK in 614ms (Views: 409.1ms | ActiveRecord: 30.8ms)
+cache: [GET /] miss
+cache: [GET /] miss
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+Served asset /application.css - 304 Not Modified (14ms)
+cache: [GET /assets/application.css] stale, valid, store
+cache: [GET /assets/application.css] stale, valid, store
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/vendor/modernizr.js" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+Served asset /vendor/modernizr.js - 304 Not Modified (35ms)
+cache: [GET /assets/vendor/modernizr.js] stale, valid, store
+cache: [GET /assets/vendor/modernizr.js] stale, valid, store
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzFfNTlfMzhfcnN6X2ltYWdlZWRpdF8xMV81NTQzNjYyODk4LmpwZyJdXQ/rsz_imageedit_11_5543662898.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzFfNTlfMzhfcnN6X2ltYWdlZWRpdF8xMV81NTQzNjYyODk4LmpwZyJdXQ/rsz_imageedit_11_5543662898.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+Served asset /application.js - 304 Not Modified (28ms)
+cache: [GET /assets/application.js] stale, valid, store
+cache: [GET /assets/application.js] stale, valid, store
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDZfMzBfMTAyX2ltYWdlZWRpdF8yXzYzNjA1ODc2MTEuanBnIl1d/imageedit_2_6360587611.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDZfMzBfMTAyX2ltYWdlZWRpdF8yXzYzNjA1ODc2MTEuanBnIl1d/imageedit_2_6360587611.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMjNfMjIxX2ltYWdlZWRpdF85Xzc3OTUyOTIwMzQuanBnIl1d/imageedit_9_7795292034.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMjNfMjIxX2ltYWdlZWRpdF85Xzc3OTUyOTIwMzQuanBnIl1d/imageedit_9_7795292034.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDlfMThfODEzX2ltYWdlZWRpdF81Xzk4OTE2MTc2NjYuanBnIl1d/imageedit_5_9891617666.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDUvMTVfMDlfMThfODEzX2ltYWdlZWRpdF81Xzk4OTE2MTc2NjYuanBnIl1d/imageedit_5_9891617666.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/assets/notebook.png" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+Served asset /notebook.png - 304 Not Modified (1ms)
+cache: [GET /assets/notebook.png] stale, valid, store
+cache: [GET /assets/notebook.png] stale, valid, store
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMDZfMjg4X3Jzel9pbWFnZWVkaXRfMTNfNzM3NjkxODg5Ny5qcGciXV0/rsz_imageedit_13_7376918897.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMDZfMjg4X3Jzel9pbWFnZWVkaXRfMTNfNzM3NjkxODg5Ny5qcGciXV0/rsz_imageedit_13_7376918897.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTNfNTVfMjRfMjUwX2ltYWdlZWRpdF8yXzY2Mjg5NTAzMzUuanBnIl1d/imageedit_2_6628950335.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTNfNTVfMjRfMjUwX2ltYWdlZWRpdF8yXzY2Mjg5NTAzMzUuanBnIl1d/imageedit_2_6628950335.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMTFfNjE3X3Jzel9pbWFnZWVkaXRfMTVfMzM0NjczMDkxM18xXy5qcGciXV0/rsz_imageedit_15_3346730913%20%281%29.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDcvMTNfMzJfMTFfNjE3X3Jzel9pbWFnZWVkaXRfMTVfMzM0NjczMDkxM18xXy5qcGciXV0/rsz_imageedit_15_3346730913%20%281%29.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+
+
+Started GET "/system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMzBfMTI3X2ltYWdlZWRpdF83XzY1NzEyODA0MTIuanBnIl1d/imageedit_7_6571280412.jpg" for 127.0.0.1 at 2014-03-11 14:56:44 -0500
+cache: [GET /system/images/W1siZiIsIjIwMTQvMDIvMDYvMTRfMTBfMzBfMTI3X2ltYWdlZWRpdF83XzY1NzEyODA0MTIuanBnIl1d/imageedit_7_6571280412.jpg] fresh
+[2014-03-11 14:56:44] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2014-03-11 16:53:17] INFO  going to shutdown ...
+[2014-03-11 16:53:17] INFO  WEBrick::HTTPServer#start done.
+Exiting
