@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140411034637) do
+ActiveRecord::Schema.define(:version => 20140413215301) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -219,6 +219,7 @@ ActiveRecord::Schema.define(:version => 20140411034637) do
     t.datetime "reset_password_sent_at"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.string   "slug"
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"

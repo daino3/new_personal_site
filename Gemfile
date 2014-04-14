@@ -23,7 +23,7 @@ group :assets do
   gem 'foundation-rails'
 end
 
-gem 'jquery-rails', '~> 2.0.0'
+gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
 
@@ -54,14 +54,15 @@ group :production do
 end
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
+gem 'refinerycms'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n', '~> 2.0.0'
+gem 'refinerycms-i18n'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
-gem 'refinerycms-page-images', '~> 2.0.0'
-gem 'globalize3', '0.3.0'
-gem 'refinerycms-blog', '~> 2.0.0'
+gem 'globalize3'
+gem 'refinerycms-blog'
+gem 'refinerycms-acts-as-indexed'
+gem 'refinerycms-page-images'
 
 ruby '1.9.3'
