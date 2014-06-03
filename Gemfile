@@ -53,6 +53,9 @@ group :production do
   gem 'fog'
 end
 
+gem "better_errors"
+gem "binding_of_caller"
+
 # Refinery CMS
 gem 'refinerycms'
 
@@ -60,8 +63,8 @@ gem 'refinerycms'
 gem 'refinerycms-i18n'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
-gem 'globalize3'
-gem 'refinerycms-blog'
+gem 'refinerycms-blog', '~> 2.1.0'
+# gem 'globalize3', '0.3.0'
 gem 'refinerycms-acts-as-indexed'
 gem 'refinerycms-page-images'
 

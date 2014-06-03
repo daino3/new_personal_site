@@ -31,12 +31,12 @@ class CreateBlogStructure < ActiveRecord::Migration
 
     add_index Refinery::Blog::Category.table_name, :id
 
-    create_table Refinery::Categorization.table_name, :id => true do |t|
-      t.integer :blog_category_id
-      t.integer :blog_post_id
-    end
+    # create_table Refinery::Categorization.table_name, :id => true do |t|
+    #   t.integer :blog_category_id
+    #   t.integer :blog_post_id
+    # end
 
-    add_index Refinery::Categorization.table_name, [:blog_category_id, :blog_post_id], :name => 'index_blog_categories_blog_posts_on_bc_and_bp'
+    # add_index Refinery::Categorization.table_name, [:blog_category_id, :blog_post_id], :name => 'index_blog_categories_blog_posts_on_bc_and_bp'
   end
 
   def down
